@@ -1,12 +1,18 @@
 /* Colour variables */
 
 :root {
-  --navy-dark: #10172a;   /* for nav + footer background */
-  --navy:      #1c2a4a;   /* for secondary dark panels */
-  --blue:      #3b82f6;   /* for links and accents */
-  --cyan:      #22d3ee;   /* for highlight */
-  --paper:     #f4f6fb;   /* for page background */
-  --ink:       #1b2230;   /* for main text colour */
+  --navy-dark: #10172a;
+  /* for nav + footer background */
+  --navy: #1c2a4a;
+  /* for secondary dark panels */
+  --blue: #3b82f6;
+  /* for links and accents */
+  --cyan: #22d3ee;
+  /* for highlight */
+  --paper: #f4f6fb;
+  /* for page background */
+  --ink: #1b2230;
+  /* for main text colour */
 }
 
 /* Base / reset */
@@ -20,26 +26,38 @@ body {
   padding: 0;
   background-color: var(--paper);
   color: var(--ink);
-  font-family: 'Inter', Arial, sans-serif;     /* Google Font 2 (Inter) - body text */
+  font-family: 'Inter', Arial, sans-serif;
+  /* Google Font 2 (Inter) - body text */
   font-size: 18px;
   line-height: 1.7;
 }
 
 /* Headings use Google Font 1 (Space Grotesk) */
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: 'Space Grotesk', 'Courier New', monospace;
   color: var(--navy-dark);
   line-height: 1.25;
   margin: 0 0 15px 0;
 }
 
-h1 { font-size: 44px; }
-h2 { font-size: 30px; }
-h3 { font-size: 21px; }
+h1 {
+  font-size: 44px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 21px;
+}
 
 p {
   margin: 0 0 18px 0;
-  max-width: 70ch;                /* It keeps line length readable */
+  max-width: 70ch;
+  /* It keeps line length readable */
 }
 
 a {
@@ -63,7 +81,8 @@ img {
 
 /* Navigation bar */
 .navbar {
-  display: flex;                 /* logo left, links right, in one row */
+  display: flex;
+  /* logo left, links right, in one row */
   justify-content: space-between;
   align-items: center;
   background-color: var(--navy-dark);
@@ -140,7 +159,8 @@ img {
 }
 
 .flex-row.reverse {
-  flex-direction: row-reverse;   /* puts the image on the left */
+  flex-direction: row-reverse;
+  /* puts the image on the left */
 }
 
 .flex-row img {
@@ -152,13 +172,15 @@ img {
 /* CSS GRID layout */
 .grid-2 {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);  /* two equal columns */
+  grid-template-columns: repeat(2, 1fr);
+  /* two equal columns */
   gap: 24px;
 }
 
 .grid-4 {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);  /* four equal columns */
+  grid-template-columns: repeat(4, 1fr);
+  /* four equal columns */
   gap: 20px;
 }
 
@@ -231,7 +253,8 @@ label {
   font-weight: 600;
 }
 
-input, textarea {
+input,
+textarea {
   width: 100%;
   padding: 10px;
   margin-bottom: 16px;
@@ -263,9 +286,13 @@ footer {
   background-color: var(--navy-dark);
   color: #b9c2d6;
   text-align: center;
+  margin: 0;
   padding: 24px;
   margin-top: 40px;
   font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 footer a {
@@ -278,17 +305,23 @@ footer a {
     flex-direction: column;
     gap: 10px;
   }
+
   .nav-links {
     flex-wrap: wrap;
     justify-content: center;
   }
+
   .flex-row,
   .flex-row.reverse {
     flex-direction: column;
   }
+
   .grid-2,
   .grid-4 {
     grid-template-columns: 1fr;
   }
-  h1 { font-size: 32px; }
+
+  h1 {
+    font-size: 32px;
+  }
 }
